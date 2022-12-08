@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+body {
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.images img {
+  width: 340px;
+  height: 180px;
+}
+.card1 {
+  position: relative;
+}
+.card2 {
+  position: relative;
+  left: 65px;
+  margin-top: 20px;
+}
+.content1 .logo {
+  position: absolute;
+  width: 60px;
+  height: 35px;
+  top: 20px;
+  left: 25px;
+}
+.card_no {
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  font-size: 22px;
+  letter-spacing: 2px;
+  top: 100px;
+  left: 25px;
+}
+.name {
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  font-size: 10px;
+  top: 150px;
+  display: inline;
+  left: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.mm {
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  font-size: 10px;
+  top: 150px;
+  display: inline;
+  padding-left: 280px;
+}
+.yy {
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  font-size: 10px;
+  top: 150px;
+  display: inline;
+  padding-left: 298px;
+}
+.cv {
+  position: absolute;
+  color: hsl(0, 0%, 100%);
+  font-size: 10px;
+  top: 82px;
+  left: 270px;
+  letter-spacing: 1px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: hsl(278, 68%, 11%);
+  font-weight: 500;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  margin-top: 12px;
+}
+input {
+  padding-left: 10px;
+  width: 270px;
+  height: 35px;
+  border-radius: 6px;
+  border: 1px solid hsl(270, 3%, 87%);
+}
+input:focus {
+  outline: none;
+}
+.last {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.last1 {
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+input::placeholder {
+  color: hsl(270, 3%, 87%);
+  font-size: 13px;
+  font-weight: 500;
+}
+input.date {
+  width: 60px;
+  margin-right: 4px;
+}
+input.cvc {
+  width: 128px;
+  margin-left: 8px;
+}
+label:last-child {
+  padding-left: 35px;
+}
+button {
+  margin-top: 25px;
+  width: 270px;
+  height: 35px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(278, 68%, 11%);
+  font-size: 13px;
+  border-radius: 6px;
+}
+button:hover {
+  cursor: pointer;
+}
+.red {
+  border: 1px solid hsl(0, 100%, 66%);
+}
+.error {
+  color: hsl(0, 100%, 66%);
+  font-size: 8px;
+  padding-top: 5px;
+  display: none;
+}
+.empty {
+  display: block;
+}
+.invalid {
+  display: block;
+}
+.wrong {
+  display: block;
+}
+.modal {
+  text-align: center;
+}
+.modal img {
+  width: 55px;
+  margin-bottom: 20px;
+}
+.modal h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 22px;
+  font-weight: 300;
+  color: hsl(278, 68%, 11%);
+  margin-bottom: 10px;
+}
+.modal p {
+  color: hsl(279, 6%, 55%);
+  font-size: 12px;
+}
+@media (max-width: 992px) {
+  body {
+    background-size: 45%;
+  }
+  .images img {
+    width: 85%;
+  }
+  .mm {
+    padding-left: 220px;
+  }
+  .yy {
+    padding-left: 238px;
+  }
+  .card_no {
+    font-size: 18px;
+  }
+  .cv {
+    left: 220px;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    background-image: url("images/bg-main-mobile.png");
+    background-size: 100%;
+  }
+  .card2 {
+    left: 0;
+  }
+
+  .images {
+    align-items: flex-end;
+    flex-direction: column-reverse;
+  }
+  .content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px) {
+  .images img {
+    width: 290px;
+    height: 170px;
+  }
+  .card1 {
+    right: 30px;
+    z-index: 1;
+    top: -70px;
+  }
+  .card2 {
+    top: 10px;
+    left: 30px;
+  }
+  .name,
+  .mm,
+  .yy {
+    top: 140px;
+  }
+  button {
+    margin-bottom: 30px;
+  }
+}
